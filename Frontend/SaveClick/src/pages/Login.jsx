@@ -33,7 +33,7 @@ function Login() {
     if (password && email) {
       try {
         const response = await axios.post(
-          "https://vkixlx1as3.execute-api.us-east-1.amazonaws.com/dev/login",
+          "https://xxxxx.execute-api.us-east-1.amazonaws.com/dev/login",
           { email, password }
         );
         console.log(response);
