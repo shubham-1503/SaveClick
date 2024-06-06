@@ -6,12 +6,12 @@ The idea is to create a shared space where any registered user can upload images
 ## Technical Details🚀
 - Frontend: Developed using React and Tailwind for a responsive and interactive user interface. Includes validation checks for empty fields to enhance user experience and data integrity.
 - Storage :
-1. DynamoDB: Used for storing user credentials with email as the partition key. DynamoDB offers flexibility and scalability, making it suitable for storing user data where fields might not always be required.
-2. S3 Bucket: Used for storing uploaded images. The S3 bucket is publicly accessible to allow users to view and download images without restrictions.
+-- DynamoDB: Used for storing user credentials with email as the partition key. DynamoDB offers flexibility and scalability, making it suitable for storing user data where fields might not always be required.
+-- S3 Bucket: Used for storing uploaded images. The S3 bucket is publicly accessible to allow users to view and download images without restrictions.
 - Backend :
-API Gateway: Deployed to connect AWS Lambda functions with respective endpoints, ensuring seamless integration between frontend and backend.
-AWS Lambda is Used to handle the logic for registration, login, image upload, and image retrieval. Lambda is preferred due to its scalability and cost-effectiveness for handling discrete events. 
-Lambda Functions:
+-- API Gateway: Deployed to connect AWS Lambda functions with respective endpoints, ensuring seamless integration between frontend and backend.
+-- AWS Lambda is Used to handle the logic for registration, login, image upload, and image retrieval. Lambda is preferred due to its scalability and cost-effectiveness for handling discrete events. 
+-- Lambda Functions:
 1. Register User: Checks if the email is unique and stores the user credentials in DynamoDB.
 2. Login User: Verifies if the email exists and if the password matches the stored password in DynamoDB.
 3. Upload Image: Stores the selected image in the S3 bucket with its name, type, and content (encoded in base64).
