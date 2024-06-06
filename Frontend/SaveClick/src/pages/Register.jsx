@@ -47,7 +47,7 @@ function Register() {
     if (password && username && email) {
       try {
         const response = await axios.post(
-          "https://vkixlx1as3.execute-api.us-east-1.amazonaws.com/dev/register",
+          "https://xxxxxx.execute-api.us-east-1.amazonaws.com/dev/register",
           { email, username, password }
         );
         console.log(response);
