@@ -11,7 +11,7 @@ function Home() {
 
   const fetchImages = async () => {
     try {
-      const response = await axios.get('https://vkixlx1as3.execute-api.us-east-1.amazonaws.com/dev/image'); 
+      const response = await axios.get('https://xxxxx.execute-api.us-east-1.amazonaws.com/dev/image'); 
       const imagesData = JSON.parse(response.data.body); // Parse the response body
       setImages(imagesData);
       console.log(imagesData);
@@ -50,7 +50,7 @@ function Home() {
       };
 
       try {
-        const response = await axios.post('https://vkixlx1as3.execute-api.us-east-1.amazonaws.com/dev/image', payload, {
+        const response = await axios.post('https://xxxx.execute-api.us-east-1.amazonaws.com/dev/image', payload, {
           headers: {
             'Content-Type': 'application/json'
           }
